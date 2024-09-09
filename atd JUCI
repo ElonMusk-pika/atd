@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Aventura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #game {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <h1>Jogo de Aventura</h1>
+        <p id="story">Você está em uma floresta. À sua frente há dois caminhos: um para a esquerda e outro para a direita. Para onde você quer ir?</p>
+        <button onclick="choose('left')">Esquerda</button>
+        <button onclick="choose('right')">Direita</button>
+    </div>
+
+    <script>
+        function choose(direction) {
+            const storyElement = document.getElementById('story');
+
+            if (direction === 'left') {
+                storyElement.textContent = 'Você seguiu para a esquerda e encontrou uma casa mágica. Parabéns, você ganhou!';
+            } else if (direction === 'right') {
+                storyElement.textContent = 'Você seguiu para a direita e encontrou um lago. Infelizmente, caiu na água e perdeu.';
+            }
+        }
+    </script>
+</body>
+</html>
